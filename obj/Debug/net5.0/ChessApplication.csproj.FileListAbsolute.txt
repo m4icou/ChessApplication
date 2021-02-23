@@ -1,0 +1,16 @@
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication.deps.json
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication.runtimeconfig.json
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication.runtimeconfig.dev.json
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication.dll
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ref/ChessApplication.dll
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/bin/Debug/net5.0/ChessApplication.pdb
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.csprojAssemblyReference.cache
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.GeneratedMSBuildEditorConfig.editorconfig
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.AssemblyInfoInputs.cache
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.AssemblyInfo.cs
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.csproj.CoreCompileInputs.cache
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.dll
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ref/ChessApplication.dll
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.pdb
+/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/Debug/net5.0/ChessApplication.genruntimeconfig.cache
