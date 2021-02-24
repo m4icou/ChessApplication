@@ -1,4 +1,4 @@
-namespace ChessApplication.Tabuleiro
+namespace Tabuleiro
 {
     enum Cor
     {

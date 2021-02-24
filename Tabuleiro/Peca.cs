@@ -1,4 +1,4 @@
-namespace ChessApplication.Tabuleiro
+namespace Tabuleiro
 {
     class Peca
     {
@@ -7,8 +7,8 @@ namespace ChessApplication.Tabuleiro
         public int QtdMovimento { get; set; }
         public TabuleiroClass Tabuleiro { get; set; }
 
-        public Peca(Posicao posicao, Cor cor, TabuleiroClass tabuleiro){
-            Posicao = posicao;
+        public Peca(TabuleiroClass tabuleiro,Cor cor){
+            Posicao = null;
             Cor = cor;
             Tabuleiro = tabuleiro;
             QtdMovimento = 0;

@@ -1,5 +1,6 @@
 ﻿using System;
-using ChessApplication.Tabuleiro;
+using Tabuleiro;
+using Xadrez;
 
 namespace ChessApplication
 {
@@ -7,8 +8,14 @@ namespace ChessApplication
     {
         static void Main(string[] args)
         {
-            Posicao p = new Posicao(3,4);
-            System.Console.WriteLine(p);
+            TabuleiroClass tabuleiro = new TabuleiroClass(8,8);
+            
+
+            tabuleiro.ColocarPeca(new Rei(tabuleiro,Cor.Preta),new Posicao(0,0));
+            tabuleiro.ColocarPeca(new Torre(tabuleiro,Cor.Preta),new Posicao(1,2));
+            tabuleiro.ColocarPeca(new Torre(tabuleiro,Cor.Preta),new Posicao(3,4));
+
+            Tela.ImprimeTabuleiro(tabuleiro);
         }
     }
 }
