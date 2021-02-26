@@ -8,15 +8,25 @@ namespace ChessApplication
     {
         static void Main(string[] args)
         {
-            TabuleiroClass tab = new TabuleiroClass(8,8);
-            
-            tab.ColocarPeca(new Rei(tab,Cor.Preta), new Posicao(3,2));
-            tab.ColocarPeca(new Rei(tab,Cor.Branca), new Posicao(2,1));
-            tab.ColocarPeca(new Torre(tab,Cor.Preta), new Posicao(1,1));
-            tab.ColocarPeca(new Rei(tab,Cor.Preta), new Posicao(5,5));
-            
-            Tela.ImprimeTabuleiro(tab);
-            
+            PartidaDeXadrez partida = new PartidaDeXadrez();
+
+            while (!partida.Terminada)
+            {
+                Console.Clear();
+                Tela.ImprimeTabuleiro(partida.Tabuleiro);
+
+                System.Console.WriteLine();
+                System.Console.WriteLine("Origem: ");
+                Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
+
+                System.Console.WriteLine("Destino: ");
+                Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
+
+                partida.executaMovimento(origem,destino);
+
+            }
+
+
         }
     }
 }
