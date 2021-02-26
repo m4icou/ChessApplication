@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "14j0pfWsMG54tHxQaG7lImQXUGI+NKMiO/MlF+IVqLNvwkXCowyVNmyjQl7HNlmo3BTmquSuJmmMfTCHAGnV+Q==",
+  "dgSpecHash": "nHKCs5MKjT60YnSOLiLsQhuXdpM11bLvIdqj4ZixNa61PjpwO+tYiixssLIlfaVEyBVrJxOR7wCJO62uKDXK3w==",
   "success": true,
-  "projectFilePath": "/home/michael/Área de Trabalho/CSHARP/ChessApplication/ChessApplication.csproj",
+  "projectFilePath": "/home/michael/CSHARP/ChessApplication/ChessApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

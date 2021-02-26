@@ -8,14 +8,15 @@ namespace ChessApplication
     {
         static void Main(string[] args)
         {
-            TabuleiroClass tabuleiro = new TabuleiroClass(8,8);
+            TabuleiroClass tab = new TabuleiroClass(8,8);
             
-
-            tabuleiro.ColocarPeca(new Rei(tabuleiro,Cor.Preta),new Posicao(0,0));
-            tabuleiro.ColocarPeca(new Torre(tabuleiro,Cor.Preta),new Posicao(1,2));
-            tabuleiro.ColocarPeca(new Torre(tabuleiro,Cor.Preta),new Posicao(3,4));
-
-            Tela.ImprimeTabuleiro(tabuleiro);
+            tab.ColocarPeca(new Rei(tab,Cor.Preta), new Posicao(3,2));
+            tab.ColocarPeca(new Rei(tab,Cor.Branca), new Posicao(2,1));
+            tab.ColocarPeca(new Torre(tab,Cor.Preta), new Posicao(1,1));
+            tab.ColocarPeca(new Rei(tab,Cor.Preta), new Posicao(5,5));
+            
+            Tela.ImprimeTabuleiro(tab);
+            
         }
     }
 }

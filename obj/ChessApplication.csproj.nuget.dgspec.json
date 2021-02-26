@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/home/michael/Área de Trabalho/CSHARP/ChessApplication/ChessApplication.csproj": {}
+    "/home/michael/CSHARP/ChessApplication/ChessApplication.csproj": {}
   },
   "projects": {
-    "/home/michael/Área de Trabalho/CSHARP/ChessApplication/ChessApplication.csproj": {
+    "/home/michael/CSHARP/ChessApplication/ChessApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/michael/Área de Trabalho/CSHARP/ChessApplication/ChessApplication.csproj",
+        "projectUniqueName": "/home/michael/CSHARP/ChessApplication/ChessApplication.csproj",
         "projectName": "ChessApplication",
-        "projectPath": "/home/michael/Área de Trabalho/CSHARP/ChessApplication/ChessApplication.csproj",
+        "projectPath": "/home/michael/CSHARP/ChessApplication/ChessApplication.csproj",
         "packagesPath": "/home/michael/.nuget/packages/",
-        "outputPath": "/home/michael/Área de Trabalho/CSHARP/ChessApplication/obj/",
+        "outputPath": "/home/michael/CSHARP/ChessApplication/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/home/michael/.nuget/NuGet/NuGet.Config"
         ],
