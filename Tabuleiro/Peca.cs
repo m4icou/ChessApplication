@@ -4,18 +4,18 @@ namespace Tabuleiro
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
-        public int QtdMovimento { get; set; }
-        public TabuleiroClass Tabuleiro { get; set; }
+        public int QtdMovimento { get; protected set; }
+        public TabuleiroClass Tabuleiro { get; protected set; }
 
         public Peca(TabuleiroClass tabuleiro, Cor cor)
         {
             Posicao = null;
-            Cor = cor;
             Tabuleiro = tabuleiro;
+            Cor = cor;
             QtdMovimento = 0;
         }
 
-        public void QuantidadeMovimentos()
+        public void IncrementarQteMovimentos()
         {
             QtdMovimento++;
         }

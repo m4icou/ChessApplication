@@ -8,7 +8,6 @@ namespace Xadrez
         public TabuleiroClass Tabuleiro { get; private set; }
         private int _turno;
         private Cor _jogadorAtual;
-
         public bool Terminada {get; private set;}
 
 
@@ -17,15 +16,15 @@ namespace Xadrez
             Tabuleiro = new TabuleiroClass(8, 8);
             _turno = 1;
             _jogadorAtual = Cor.Branca;
-            ColocarPecas();
             Terminada = false;
+            ColocarPecas();
         }
 
 
         public void executaMovimento(Posicao origem, Posicao destino)
         {
             Peca p = Tabuleiro.RetirarPeca(origem);
-            p.QuantidadeMovimentos();
+            p.IncrementarQteMovimentos();
             Peca pecaCapturada = Tabuleiro.RetirarPeca(destino);
             Tabuleiro.ColocarPeca(p, destino);
         }

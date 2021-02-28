@@ -50,14 +50,14 @@ namespace Xadrez
             }
 
 
-            //ne
+            //no
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
             if(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)){
                 matriz[pos.Linha, pos.Coluna] = true;
             }
 
 
-            //se
+            //so
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
             if(Tabuleiro.PosicaoValida(pos) && PodeMover(pos)){
                 matriz[pos.Linha, pos.Coluna] = true;
