@@ -15,10 +15,19 @@ namespace ChessApplication
             System.Console.WriteLine();
             ImprimePecasCapturadas(partida);
             System.Console.WriteLine("Turno: " + partida.Turno);
-            System.Console.WriteLine("Aguardando: " + partida.JogadorAtual);
 
-            if(partida.Xeque){
-                System.Console.WriteLine("XEQUE!");
+            if (!partida.Terminada)
+            {
+                System.Console.WriteLine("Aguardando: " + partida.JogadorAtual);
+
+                if (partida.Xeque)
+                {
+                    System.Console.WriteLine("XEQUE!");
+                }
+            }
+            else{
+                System.Console.WriteLine("XEQUE-MATE");
+                System.Console.WriteLine("Vencedor: " +partida.JogadorAtual);
             }
         }
 
@@ -40,7 +49,8 @@ namespace ChessApplication
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
             System.Console.Write("[");
-            foreach(Peca peca in conjunto){
+            foreach (Peca peca in conjunto)
+            {
                 System.Console.Write(peca + " ");
             }
             System.Console.Write("]");
