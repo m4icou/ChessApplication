@@ -16,6 +16,10 @@ namespace ChessApplication
             ImprimePecasCapturadas(partida);
             System.Console.WriteLine("Turno: " + partida.Turno);
             System.Console.WriteLine("Aguardando: " + partida.JogadorAtual);
+
+            if(partida.Xeque){
+                System.Console.WriteLine("XEQUE!");
+            }
         }
 
 
