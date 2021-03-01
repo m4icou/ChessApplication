@@ -21,7 +21,7 @@ namespace Xadrez
             return p != null && p.Cor != Cor;
         }
 
-        public bool Livre(Posicao pos)
+        private bool Livre(Posicao pos)
         {
             return Tabuleiro.peca(pos) == null;
         }
@@ -31,7 +31,7 @@ namespace Xadrez
             bool[,] matriz = new bool[Tabuleiro.Linha, Tabuleiro.Coluna];
 
             Posicao pos = new Posicao(0, 0);
-            Posicao aux = new Posicao(0,0);
+            
 
             if (Cor == Cor.Branca)
             {
@@ -42,8 +42,8 @@ namespace Xadrez
                 }
 
                 pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna);
-                aux.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
-                if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && QtdMovimento == 0 && Livre(aux))
+                Posicao p2 = new Posicao(Posicao.Linha - 1, Posicao.Coluna);
+                if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && Livre(p2) && QtdMovimento == 0 )
                 {
                     matriz[pos.Linha, pos.Coluna] = true;
                 }
@@ -70,8 +70,8 @@ namespace Xadrez
                 }
 
                 pos.DefinirValores(Posicao.Linha + 2, Posicao.Coluna);
-                aux.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
-                if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && QtdMovimento == 0 && Livre(aux))
+                Posicao p2 = new Posicao(Posicao.Linha + 1, Posicao.Coluna);
+                if (Tabuleiro.PosicaoValida(pos) && Livre(pos) && QtdMovimento == 0 && Livre(p2))
                 {
                     matriz[pos.Linha, pos.Coluna] = true;
                 }

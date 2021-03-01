@@ -82,15 +82,26 @@ namespace Xadrez
                 //#jogada especial roque pequeno
                 Posicao PosT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
                 if(TesteTorreParaRoque(PosT1)){
-                    Posicao p1 = new Posicao(Tabuleiro.Linha, Tabuleiro.Coluna + 1);
-                    Posicao p2 = new Posicao(Tabuleiro.Linha, Tabuleiro.Coluna + 2);
+                    Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna + 1);
+                    Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna + 2);
                     if(Tabuleiro.peca(p1) == null && Tabuleiro.peca(p2) == null){
                         matriz[Posicao.Linha, Posicao.Coluna + 2] = true;
                     }
                 }
+
+                //#jogada especial roque grande
+                Posicao PosT2 = new Posicao(Posicao.Linha, Posicao.Coluna - 4);
+                if(TesteTorreParaRoque(PosT2)){
+                    Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
+                    Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna - 2);
+                    Posicao p3 = new Posicao(Posicao.Linha, Posicao.Coluna - 3);
+                    if(Tabuleiro.peca(p1) == null && Tabuleiro.peca(p2) == null && Tabuleiro.peca(p3)==null){
+                        matriz[Posicao.Linha, Posicao.Coluna - 2] = true;
+                    }
+                }
             }
 
-
+        
 
             return matriz;
 
@@ -104,3 +115,4 @@ namespace Xadrez
         
     }
 }
+

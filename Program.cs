@@ -10,11 +10,12 @@ namespace ChessApplication
         {
             try
             {
-               PartidaDeXadrez partida = new PartidaDeXadrez();
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 while (!partida.Terminada)
                 {
-                    try{
+                    try
+                    {
                         Console.Clear();
                         Tela.ImprimirPartida(partida);
 
@@ -23,27 +24,30 @@ namespace ChessApplication
                         Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
                         partida.ValidarPosicaoDeOrigem(origem);
 
-                        bool [,] posicoesPossiveis = partida.Tabuleiro.peca(origem).MovimentosPossiveis();
+                        bool[,] posicoesPossiveis = partida.Tabuleiro.peca(origem).MovimentosPossiveis();
                         Console.Clear();
-                        Tela.ImprimeTabuleiro(partida.Tabuleiro, posicoesPossiveis);    
+                        Tela.ImprimeTabuleiro(partida.Tabuleiro, posicoesPossiveis);
 
                         System.Console.WriteLine();
                         System.Console.Write("Destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
-                        partida.ValidarPosicaoDeDestino(origem,destino);
+                        partida.ValidarPosicaoDeDestino(origem, destino);
 
-                        partida.RealizaJogada(origem,destino);
+                        partida.RealizaJogada(origem, destino);
+
                     }
-                    catch(TabuleiroException e){
+                    catch (TabuleiroException e)
+                    {
                         System.Console.WriteLine(e.Message);
                         System.Console.ReadLine();
-                    } 
+                    }
                 }
                 Console.Clear();
                 Tela.ImprimirPartida(partida);
 
             }
-            catch(Exception e){
+            catch (Exception e)
+            {
                 System.Console.WriteLine(e.Message);
             }
 
