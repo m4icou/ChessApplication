@@ -16,13 +16,10 @@ namespace ChessApplication
                 {
                     try{
                         Console.Clear();
-                        Tela.ImprimeTabuleiro(partida.Tabuleiro);
-                        System.Console.WriteLine();
-                        System.Console.WriteLine("Turno: " + partida.Turno);
-                        System.Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+                        Tela.ImprimirPartida(partida);
 
                         System.Console.WriteLine();
-                        System.Console.WriteLine("Origem: ");
+                        System.Console.Write("Origem: ");
                         Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
                         partida.ValidarPosicaoDeOrigem(origem);
 
@@ -30,7 +27,8 @@ namespace ChessApplication
                         Console.Clear();
                         Tela.ImprimeTabuleiro(partida.Tabuleiro, posicoesPossiveis);    
 
-                        System.Console.WriteLine("Destino: ");
+                        System.Console.WriteLine();
+                        System.Console.Write("Destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
                         partida.ValidarPosicaoDeDestino(origem,destino);
 
