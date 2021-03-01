@@ -4,8 +4,11 @@ namespace Xadrez
 {
     class Rei : Peca
     {
-        public Rei(TabuleiroClass tabuleiro, Cor cor):base(tabuleiro,cor)
+        private PartidaDeXadrez Partida;
+
+        public Rei(TabuleiroClass tabuleiro, Cor cor, PartidaDeXadrez partida):base(tabuleiro,cor)
         {
+            Partida = partida;
         }
 
         public bool PodeMover(Posicao posicao){
@@ -13,6 +16,11 @@ namespace Xadrez
             return p == null || p.Cor != Cor;
         }
 
+
+        private bool TesteTorreParaRoque(Posicao pos){
+            Peca p = Tabuleiro.peca(pos);
+            return p != null && p is Torre && p.Cor == Cor && p.QtdMovimento == 0;
+        }
         public override bool[,] MovimentosPossiveis()
         {
             bool[,] matriz = new bool[Tabuleiro.Linha,Tabuleiro.Coluna];
@@ -69,6 +77,21 @@ namespace Xadrez
                 matriz[pos.Linha, pos.Coluna] = true;
             }
             
+            //#jogada especial roque
+            if(QtdMovimento == 0 && !Partida.Xeque){
+                //#jogada especial roque pequeno
+                Posicao PosT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
+                if(TesteTorreParaRoque(PosT1)){
+                    Posicao p1 = new Posicao(Tabuleiro.Linha, Tabuleiro.Coluna + 1);
+                    Posicao p2 = new Posicao(Tabuleiro.Linha, Tabuleiro.Coluna + 2);
+                    if(Tabuleiro.peca(p1) == null && Tabuleiro.peca(p2) == null){
+                        matriz[Posicao.Linha, Posicao.Coluna + 2] = true;
+                    }
+                }
+            }
+
+
+
             return matriz;
 
         }
